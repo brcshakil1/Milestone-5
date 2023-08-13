@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <h1 class="handler-status">Final DOM Event Handlers</h1>
+    <p>User Name: <span class="input-text">________</span></p>
+    <input type="text" class="input-field">
+    <button class="update-btn">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnClick()">handle event by on click</button>
+    <button id="handleBtn">add event listener by click</button>
+
+    <script>
+        // Option 1
+        function handleOnClick() {
+            const handlerStatus = document.querySelector('.handler-status');
+            handlerStatus.textContent = 'Its happened because of handle click event. '
+        }
+        // option 2
+        document.getElementById('handleBtn').addEventListener('click', ()=> {
+            const handlerStatus = document.querySelector('.handler-status');
+            handlerStatus.textContent = 'Its happened because of addEventListener event'
+        })
+
+        // input field
+        
+
+        document.querySelector('.update-btn').addEventListener('click', ()=> {
+            const inputText = document.querySelector('.input-text');
+            const inputField = document.querySelector('.input-field');
+            inputText.innerText = inputField.value;
+            inputField.value = ''
+            inputText.style.color = 'goldenrod'
+        })
+    </script>
+</body>
+</html>
