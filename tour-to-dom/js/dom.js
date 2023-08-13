@@ -1,7 +1,7 @@
 const lists = document.getElementsByTagName('li');
 const newItems = document.getElementsByClassName('new-Items');
 const mainHeading = document.getElementById('main-heading');
-const fruitsList = document.querySelectorAll('.fruits-container li');
+const fruitsContainer = document.querySelectorAll('.fruits-container li');
 
 for (const list of lists) {
     list.style.color = 'tomato';
@@ -19,9 +19,6 @@ mainHeading.style.textAlign = 'center';
 document.body.style.margin = '0';
 document.body.style.padding = '100px';
 
-console.log(lists, fruitsList)
+// console.log(lists, fruitsList);
 
 // ----------------------------------------------------------------------------------------------------------------- //
-fruitsList.forEach((fruit)=> {
-    console.log(fruit)
-})
